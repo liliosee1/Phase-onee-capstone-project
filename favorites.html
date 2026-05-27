@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> Favorites </title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+
+<nav class="bg-black text-white sticky top-0 z-50">
+  <div class="max-w-6xl mx-auto flex items-center justify-between px-4 py-4">
+
+    <div class="text-2xl font-bold">
+      Book<span class="text-pink-400">Nest</span>
+    </div>
+
+    <div class="hidden md:flex space-x-6">
+      <a href="index.html" class="hover:text-pink-400">Home</a>
+  
+      <a href="about.html" class="hover:text-pink-400">About</a>
+    </div>
+
+    <button class="md:hidden text-2xl" onclick="toggleMenu()">☰</button>
+  </div>
+
+  <div id="mobileMenu" class="hidden flex flex-col px-6 pb-4 space-y-3 md:hidden">
+    <a href="index.html">Home</a>
+    <a href="favorites.html" class="text-yellow-400">Favorites</a>
+    <a href="about.html">About</a>
+  </div>
+</nav>
+
+<section class="bg-gradient-to-r from-pink-600 to-gray-400 text-white py-16 text-center">
+  <p class="uppercase tracking-widest text-yellow-300 text-sm">Your Collection</p>
+  <h1 class="text-4xl font-extrabold mt-2">My Favorites</h1>
+  <p class="text-white/80 mt-2">Books you've saved to revisit later</p>
+</section>
+
+<!-- MAIN -->
+<section class="max-w-6xl mx-auto px-4 py-10">
+
+  <!-- STATS -->
+  <div id="statsRow" class="hidden grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8"></div>
+
+  <!-- TOP BAR -->
+  <div class="flex justify-between items-center mb-6 flex-wrap gap-3">
+
+    <h2 class="text-2xl font-bold" id="listTitle">Favorites Books</h2>
+
+    <button
+      id="clearBtn"
+      onclick="clearAll()"
+      class="hidden px-4 py-2 border border-gray-300 rounded-lg text-gray-600 hover:border-red-500 hover:text-red-500 transition"
+    >
+      Clear All
+    </button>
+
+  </div>
+
+  <!-- Grid -->
+  <div id="favGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"></div>
+
+  <!-- Empty state -->
+  <div id="emptyState" class="hidden flex flex-col items-center text-center py-20">
+    <div class="text-6xl opacity-30"></div>
+    <h3 class="text-2xl font-bold mt-4">No favorites yet</h3>
+    <p class="text-gray-500 mt-2 max-w-md">
+      Head back to the homepage, search for books, and tap Save to add them here.
+    </p>
+
+    <a href="index.html" class="mt-6 bg-black text-white px-6 py-3 rounded-lg hover:bg-gray-800">
+      Browse Books
+    </a>
+  </div>
+
+</section>
+
+<footer class="bg-black text-gray-400 mt-10">
+  
+  <div class="text-center text-xs py-4 border-t border-gray-800">
+    © 2025 BookNest· Frontend Phase 1 Capstone Project
+  </div>
+</footer>
+
+<!-- Toast -->
+<div id="toast" class="fixed bottom-5 right-5 bg-black text-white px-4 py-2 rounded-lg hidden"></div>
+
+<script type="module" src="fav.js">
+  
+</script>
+
+</body>
+</html>
