@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About </title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+<nav class="bg-black text-white sticky top-0 z-50">
+  <div class="max-w-6xl mx-auto flex items-center justify-between px-4 py-4">
+
+    <div class="text-2xl font-bold">
+      Book<span class="text-pink-400">Nest</span>
+    </div>
+
+    <div class="hidden md:flex space-x-6">
+      <a href="index.html" class="hover:text-pink-400">Home</a>
+      <a href="favorites.html" class="hover:text-pink-400">Favorites</a>
+   
+    </div>
+
+    <button class="md:hidden text-2xl" onclick="toggleMenu()">☰</button>
+  </div>
+
+  <!-- Mobile menu -->
+  <div id="mobileMenu" class="hidden flex flex-col px-6 pb-4 space-y-3 md:hidden">
+    <a href="index.html">Home</a>
+    <a href="favorites.html">Favorites</a>
+    <a href="about.html" class="text-yellow-400">About</a>
+  </div>
+</nav>
+
+<section class="bg-gradient-to-r from-pink-400 to-gray-400 text-white text-center py-16 px-4">
+  
+  <h1 class="text-4xl font-extrabold mt-2">
+    About  Book Explorer
+  </h1>
+
+  
+</section>
+<section class="max-w-4xl mx-auto px-4 py-12 space-y-8">
+
+  <!-- intro -->
+  <div class="bg-white p-6 rounded-xl shadow">
+    <p class="text-gray-600 leading-relaxed">
+      Book Explorer is a responsive, interactive, API-powered web application built as a frontend capstone project using HTML, Tailwind CSS, and JavaScript. It demonstrates real-world concepts like API integration, state management, and responsive UI design.
+    </p>
+  </div>
+
+
+  <div class="bg-white p-6 rounded-xl shadow">
+    <h2 class="text-xl font-bold mb-4">What it does</h2>
+
+    <ul class="space-y-3 text-gray-600">
+      <li class="flex gap-2">  Browse and search millions of books from Open Library API</li>
+      <li class="flex gap-2"> Save and remove favorite books (localStorage)</li>
+      <li class="flex gap-2">  Fully responsive mobile-first design</li>
+      <li class="flex gap-2">  Loading, error, and empty states</li>
+      <li class="flex gap-2">  Multi-page navigation system</li>
+    </ul>
+  </div>
+
+ 
+
+  </div>
+
+  
+  <div class="bg-white p-6 rounded-xl shadow">
+    <h2 class="text-xl font-bold mb-4">Tech Stack</h2>
+
+    <div class="flex flex-wrap gap-2 text-sm">
+      <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full">HTML5</span>
+      <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full">Tailwind CSS</span>
+      <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full">JavaScript ES6</span>
+      <span class="px-3 py-1 bg-indigo-100 rounded-full">ES6 Modules</span>
+      <span class="px-3 py-1 bg-indigo-100 rounded-full">async/await</span>
+      <span class="px-3 py-1 bg-indigo-100 rounded-full">localStorage</span>
+      <span class="px-3 py-1 bg-indigo-100 rounded-full">Open Library API</span>
+      <span class="px-3 py-1 bg-indigo-100 rounded-full">GitHub</span>
+    </div>
+  </div>
+
+  
+  <div class="bg-white p-6 rounded-xl shadow">
+    <h2 class="text-xl font-bold mb-4">Learning Outcomes</h2>
+
+    <ul class="space-y-3 text-gray-600">
+      <li> Build responsive websites using Tailwind CSS</li>
+      <li> Handle DOM events and UI updates with JavaScript</li>
+      <li> Fetch and display data from APIs</li>
+      <li> Structure code using ES6 modules</li>
+      <li> Use GitHub for collaboration workflow</li>
+    </ul>
+  </div>
+
+</section>
+<footer class="bg-black text-gray-400 mt-10">
+  
+
+  <div class="text-center text-xs py-4 border-t border-gray-800">
+    © 2025 BookNest · Frontend Phase 1 Capstone Project
+  </div>
+</footer>
+
+<script>
+  function toggleMenu() {
+    document.getElementById('mobileMenu').classList.toggle('hidden');
+  }
+</script>
+
+</body>
+</html>
