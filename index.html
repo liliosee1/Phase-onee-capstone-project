@@ -1,0 +1,98 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book Nest</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+<nav class="bg-black text-white sticky top-0 z-50">
+  <div class="max-w-6xl mx-auto flex items-center justify-between px-4 py-4">
+
+    <div class="text-2xl font-bold">
+      Book<span class="text-pink-400">Nest</span>
+    </div>
+
+    <div class="hidden md:flex space-x-6">
+      <a href="favorites.html" class="hover:text-pink-400 transition">Favorites</a>
+      <a href="about.html" class="hover:text-pink-400 transition">About</a>
+    </div>
+
+    <button class="md:hidden text-2xl" onclick="toggleMenu()">☰</button>
+  </div>
+
+  
+  <div id="mobileMenu" class="hidden flex flex-col px-6 pb-4 space-y-3 md:hidden">
+    <a href="index.html" class="hover:text-yellow-400">Home</a>
+    <a href="favorites.html" class="hover:text-yellow-400">Favorites</a>
+    <a href="about.html" class="hover:text-yellow-400">About</a>
+  </div>
+</nav>
+
+<section id="hero"class="bg-gradient-to-r from-gray-400 to-pink-600 text-white text-center py-20 px-4">
+ 
+    <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">
+      Discover Your Next Great Read <br />
+     
+    </h1>
+
+    <p class="mt-4 text-lg text-white/90">
+      Search books, explore authors, and build your personal library.
+    </p>
+
+    <div class="mt-6 text-sm text-white/80">
+      Powered by <span class="font-semibold text-white">Open Library</span> • Millions of books
+    </div>
+  </div>
+</section>
+
+<!-- Search -->
+<div class="max-w-3xl mx-auto px-4 -mt-10">
+  <div class="flex shadow-lg rounded-xl overflow-hidden">
+    <input
+      type="text"
+      id="searchInput"
+      placeholder="Search by title, author, or keyword..."
+      class="w-full px-4 py-3 outline-none"/>
+    <button
+      onclick="handleSearch()"
+      class="bg-black text-white px-6 hover:bg-gray-800 transition">
+      Search
+    </button>
+  </div>
+</div>
+
+<div class="max-w-6xl mx-auto px-4 py-10">
+
+  <div class="flex justify-between items-center mb-6">
+    <h2 class="text-2xl font-bold" id="sectionTitle">Popular Books</h2>
+    <span id="resultCount" class="text-sm text-gray-500"></span>
+  </div>
+
+  <div id="booksGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"></div>
+
+  <div id="stateBox" class="hidden text-center py-20 text-gray-500"></div>
+</div>
+
+<footer class="bg-black text-gray-400 mt-10">
+  
+
+  <div class="text-center text-xs py-4 border-t border-gray-800">
+    © 2025 BookNest · Frontend Phase 1 Capstone Project
+  </div>
+</footer>
+
+<!-- Toast -->
+<div id="toast" class="fixed bottom-5 right-5 bg-black text-white px-4 py-2 rounded-lg shadow-lg hidden"></div>
+
+<script type="module" src="index.js">
+  
+</script>
+
+</body>
+</html>
